@@ -2,6 +2,9 @@ body{
     margin:0px;
     padding:0px;
 }
+
+/* -----------------------top nav-------------------------- */
+
 .top_nav{
     background-color: #D9D9d9;
     /* overflow: auto; */
@@ -97,8 +100,8 @@ img{
     color:black;
 }
 
+/* ------------------------------categories nav------------------------------------- */
 
-/* ------------------------------------------------------------------- */
 .hidden{
     display:none;
     width: 100px;
@@ -140,13 +143,7 @@ a.category{
     /* border-color: aqua; */
     transition: background-color 1s, width 0.3s;
 }
-/* ------------------------------------ */
-
-
-
-
-
-
+/* ----------------search bar-------------------- */
 
 .search{
     padding:0px;
@@ -163,8 +160,6 @@ a.category{
     border-radius: 20px;
 }
 .search_bar::placeholder{
-    /* padding-top: 50px; */
-    /* color:white; */
     font-weight: 100;
     color:#444242
 
@@ -172,7 +167,6 @@ a.category{
 .search button{
     margin:3px;
     border:none;
-    /* padding:10px; */
     background: transparent;
     float:left;
 
@@ -195,4 +189,6 @@ input[type="search"]{
 .search_bar:focus{
     outline: none;
 }
+
+/* ----------------book grid-------------------- */
 
