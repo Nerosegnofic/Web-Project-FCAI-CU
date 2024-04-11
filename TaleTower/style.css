@@ -1,0 +1,116 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+.top_nav{
+    background-color: #D9D9d9;
+    /* overflow: auto; */
+    width:100%;
+    height:70px;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.left, .right{
+    font-size:15px;
+    /* padding-top: 15px; */
+
+    padding-bottom: 25px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 25px;
+
+
+    /* height:36px; */
+}
+a{
+    text-decoration: none;
+    color:#7A7A7A;
+}
+.left:hover, .right:hover{
+    background-color: #848080;
+
+    border-bottom-style:solid;
+    border-bottom-width: 3px;
+    border-bottom-color:#848080;
+    /* color: white; */
+}
+.active{
+    background-color: #A4A0A0;
+    border-bottom-style:solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #CA5D3B;
+}
+.active div{
+        color:black;
+    }
+.left:hover, .right:hover{
+    color:#d9d9d9;
+    transition: 0.3s;
+}
+.logo{
+    margin:0px;
+    padding:0px;
+}
+.logo img:hover{
+    background-color: #848080;
+    transition: 2s;
+}
+img{
+    padding-top:3px;
+}
+/* .signout div{
+    border-style:solid;
+    border-color: #CA5D3B;
+    border-radius: 25px;
+    background-color:#CA5D3B ;
+    width:100px;
+    padding: 10px;
+    text-align: center;
+    margin-top:0px;
+} */
+/* ------------------------------------------------------------------- */
+.hidden{
+    display:none;
+    width: 100px;
+    margin:0px;
+    padding-top:20px;
+}
+.ctitle{
+    margin-top:25px;
+    margin-bottom: 5px;;
+    text-align: center;
+    width: 100%;
+}
+a.category{
+    /* border:solid #fff; */
+    width:150px;
+    padding:0px;
+}
+.categories{
+    /* border:solid #fff; */
+    margin:0px;
+}
+.hidden .cat{
+    margin:0px;
+    text-align: center;
+    padding: 20px;
+    width:100%;
+}
+.category:hover .hidden{
+    display:block;
+}
+.cat{
+    background-color: #848080;
+}
+.hidden .cat:hover{
+    box-sizing: border-box;
+    width:150px;
+    background-color: black;
+    /* border-style: double; */
+    /* border-color: aqua; */
+    transition: background-color 1s, width 0.3s;
+}
