@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Borrowed Books</title>
 </head>
 <body>
@@ -15,14 +17,18 @@
             <div class="categories">
                 <div class="ctitle">Categories</div>
                 <div class="hidden">
-                    <div class="cat" onclick="location.href='scifi.html';">SciFi</div>
+                    <div class="cat" onclick="location.href='scifi.html';">Sci-Fi</div>
                     <div class="cat" onclick="location.href='adventure.html';">Adventure</div>
                     <div class="cat" onclick="location.href='fantasy.html';">Fantasy</div>
                     <div class="cat" onclick="location.href='history.html';">History</div>
                 </div>
             </div></a>
-        <a href="main.html" class="right signout"><div>Sign Out</div></a>
-        <a href="#name" class="right"><div>Name</div></a>
+        <div class="left search">
+            <button type="submit" class="s-button"><img src="magnifying-glass.png" height="30px"></button>
+            <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar">
+        </div>
+        <a href="main.html" class="right signout">Sign Out</a>
+        <a href="#name" class="right name">N</a>
     </div>
 </body>
 </html>

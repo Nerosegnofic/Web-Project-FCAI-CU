@@ -16,15 +16,10 @@ body{
 }
 .left, .right{
     font-size:15px;
-    /* padding-top: 15px; */
-
     padding-bottom: 25px;
     padding-left:20px;
     padding-right:20px;
     padding-top: 25px;
-
-
-    /* height:36px; */
 }
 a{
     text-decoration: none;
@@ -36,6 +31,8 @@ a{
     border-bottom-style:solid;
     border-bottom-width: 3px;
     border-bottom-color:#848080;
+    color:#d9d9d9;
+    transition: 0.3s;
     /* color: white; */
 }
 .active{
@@ -47,10 +44,6 @@ a{
 .active div{
         color:black;
     }
-.left:hover, .right:hover{
-    color:#d9d9d9;
-    transition: 0.3s;
-}
 .logo{
     margin:0px;
     padding:0px;
@@ -62,16 +55,49 @@ a{
 img{
     padding-top:3px;
 }
-/* .signout div{
+
+
+.signout,.name{
     border-style:solid;
-    border-color: #CA5D3B;
-    border-radius: 25px;
-    background-color:#CA5D3B ;
-    width:100px;
+    border-radius: 20px;
+    height:20px;
     padding: 10px;
     text-align: center;
-    margin-top:0px;
-} */
+    /* margin-top:0px; */
+    margin: 10px;
+    color:black;
+    vertical-align: middle;
+}
+.signout{
+    /* margin-left:5px; */
+    width:90px;
+    padding-top: 13px;
+    border-color: #CA5D3B;
+    background-color:#CA5D3B ;
+    
+}
+.name{
+    width:25px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    border-color: #9B9393;
+    background-color:#9B9393 ;
+    color:white;
+    font-size:20px;
+}
+.name:hover{
+    border-color: #848080;
+    background-color:#848080 ;
+    color:white;
+}
+.signout:hover{
+    background-color: rgb(228, 1, 1);
+    border-style:solid;
+    border-color: rgb(228, 1, 1);
+    color:black;
+}
+
+
 /* ------------------------------------------------------------------- */
 .hidden{
     display:none;
@@ -114,3 +140,59 @@ a.category{
     /* border-color: aqua; */
     transition: background-color 1s, width 0.3s;
 }
+/* ------------------------------------ */
+
+
+
+
+
+
+
+.search{
+    padding:0px;
+    padding-bottom: 15px;
+    margin:10px;
+    box-sizing: border-box;
+    width:460px;
+    height:47px;
+    border-radius: 20px;
+    /* border-color: black; */
+    background-color: #A4A0A0;
+    border-style: solid;
+    border-color: #A4A0A0;
+    border-radius: 20px;
+}
+.search_bar::placeholder{
+    /* padding-top: 50px; */
+    /* color:white; */
+    font-weight: 100;
+    color:#444242
+
+}
+.search button{
+    margin:3px;
+    border:none;
+    /* padding:10px; */
+    background: transparent;
+    float:left;
+
+}
+.search:hover{
+    background-color:#A4A0A0;
+    border-color:#A4A0A0 ;
+}
+input[type="search"]{
+    background: transparent;
+    border:none; 
+    margin:0px;
+    /* padding:20px; */
+    padding-bottom: 7px;
+    height:50px;
+    width:320px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:medium;
+}
+.search_bar:focus{
+    outline: none;
+}
+
