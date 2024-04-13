@@ -9,11 +9,14 @@ body{
     background-color: #D9D9d9;
     /* overflow: auto; */
     width:100%;
-    height:70px;
+    /* height:70px; */
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
 }
 .left{
     float:left;
@@ -53,6 +56,7 @@ a{
 .logo{
     margin:0px;
     padding:0px;
+    padding-left:10px;
 }
 .logo img:hover{
     background-color: #848080;
@@ -78,7 +82,6 @@ img{
     padding-top: 13px;
     border-color: #CA5D3B;
     background-color:#CA5D3B ;
-    
 }
 .name{
     width:25px;
@@ -199,11 +202,18 @@ input[type="search"]{
 .book-grid{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    padding:20px;
+    grid-gap: 50px;
+    padding:50px;
+    padding-left:50px;
 }
 .book{
-    border-color:white;
-    border-style:solid;
-    height:300px;
+    /* border-color:rgb(246, 0, 0);
+    border-style:solid; */
+    /* border-width:10px; */
+    height:270px;
+    margin:0px;
+}
+.book img{
+    height:270px;
+    padding:0px;
 }
