@@ -5,7 +5,7 @@ body{
 
 /* -----------------------top nav-------------------------- */
 
-.top_nav{
+.top_nav, .top_nav_admin{
     background-color: #D9D9d9;
     /* overflow: auto; */
     width:100%;
@@ -49,6 +49,9 @@ a{
     border-bottom-style:solid;
     border-bottom-width: 3px;
     border-bottom-color: #CA5D3B;
+}
+.active.cat{
+    background-color: #A4A0A0;
 }
 .active div{
         color:black;
@@ -135,18 +138,19 @@ a.category{
 }
 .category:hover .hidden{
     display:block;
+    color:black;
 }
 .category:hover body{
     background-color: black;
 }
 .cat{
-    background-color: #848080;
+    background-color: #d9d9d9;
 }
 .hidden .cat:hover{
     box-sizing: border-box;
     width:150px;
-    background-color: black;
-    transition: background-color 1s, width 0.3s;
+    background-color: #848080;
+    transition: background-color 0.2s, width 0.3s;
 }
 /* ----------------search bar-------------------- */
 
@@ -199,21 +203,28 @@ input[type="search"]{
 
 /* ----------------book grid-------------------- */
 
-.book-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 50px;
-    padding:50px;
-    padding-left:50px;
-}
-.book{
-    /* border-color:rgb(246, 0, 0);
-    border-style:solid; */
-    /* border-width:10px; */
-    height:270px;
-    margin:0px;
+.book-flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin:50px;
 }
 .book img{
-    height:270px;
-    padding:0px;
+    height:300px;
 }
+.book{
+    margin:30px;
+}
+
+/* ---------------------ADMIN PAGE---------------------------- */
+
+.top_nav_admin{
+    /* float:left; */
+    justify-content:flex-start;
+}
+.top_nav_admin a{
+    margin:0px 20px;
+}
+
+
+/* -----------------------------------ADMIN DETAILS PAGE------------------------------------ */

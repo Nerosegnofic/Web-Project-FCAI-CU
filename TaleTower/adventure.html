@@ -3,30 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Adventure Category Page</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Adventure</title>
     <meta name="adventure" content="Adventure Category Page for Tale Tower" />
 </head>
 
 <body>
-    <div class="header-container">
-        <a href="second_main.html"><img src="logo.jpg" height="150px" width="250px" alt="View Main Page"></a>
-        <h1 align="center">Tale Tower Library</h1>
-        <nav>
-            <a href="second_main.html">Home</a>
-            <a href="#accountname">David Jones</a>
-            <a href="available.html">Available Books</a>
-            <a href="borrowedproj.html">Borrowed Books</a>
-        </nav>
-        <hr>
-        <nav>
-            <label>Categories</label>
-            <a href="scifi.html">Sci-Fi</a>
-            <a href="adventure.html">Adventure</a>
-            <a href="fantasy.html">Fantasy</a>
-            <a href="history.html">History</a>
-        </nav>
-
-        <hr>
+    <div class="top_nav">
+        <a href="available.html" class="left logo"><div><img src="logo_nobg.png" height="60px"></div></a>
+        <a href="available.html" class="left"><div>Available Books</div></a>
+        <a href="borrowed.html" class="left"><div>Borrowed Books</div></a>
+        <a href="#cat" class="left category">
+            <div class="categories">
+                <div class="ctitle">Categories</div>
+                <div class="hidden">
+                    <div class="cat" onclick="location.href='scifi.html';">Sci-Fi</div>
+                    <div class="cat active" onclick="location.href='adventure.html';">Adventure</div>
+                    <div class="cat" onclick="location.href='fantasy.html';">Fantasy</div>
+                    <div class="cat" onclick="location.href='history.html';">History</div>
+                </div>
+            </div></a>
+        <div class="left search">
+            <button type="submit" class="s-button"><img src="magnifying-glass.png" height="30px"></button>
+            <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar">
+        </div>
+        <a href="#name" class="right name">N</a>
+        <a href="main.html" class="right signout">Sign Out</a>
+    </div>
 
         <h2>Adventure</h2>
 
