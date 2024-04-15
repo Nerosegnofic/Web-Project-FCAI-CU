@@ -1,4 +1,4 @@
-body{
+ body{
     margin:0px;
     padding:0px;
 }
@@ -6,7 +6,7 @@ body{
 /* -----------------------top nav-------------------------- */
 
 .top_nav, .top_nav_admin{
-    background-color: #D9D9d9;
+    background-color: #0a0a0a;
     /* overflow: auto; */
     width:100%;
     /* height:70px; */
@@ -34,7 +34,7 @@ body{
 }
 a{
     text-decoration: none;
-    color:#7A7A7A;
+    color:#BD804A;
 }
 .left:hover, .right:hover{
     background-color: #848080;
@@ -83,16 +83,16 @@ img{
 .signout{
     width:90px;
     padding-top: 13px;
-    border-color: #CA5D3B;
-    background-color:#CA5D3B ;
+    border-color: #BD804A;
+    background-color:#BD804A;
 }
 .name{
     width:25px;
     padding-top: 11px;
     padding-bottom: 13px;
-    border-color: #9B9393;
-    background-color:#9B9393 ;
-    color:white;
+    border-color:#BD804A;
+    background-color:#060606 ;
+    color:#BD804A;
     font-size:20px;
 }
 .name:hover{
@@ -138,13 +138,13 @@ a.category{
 }
 .category:hover .hidden{
     display:block;
-    color:black;
+    color:#BD804A;
 }
 .category:hover body{
     background-color: black;
 }
 .cat{
-    background-color: #d9d9d9;
+    background-color: #0a0a0a;
 }
 .hidden .cat:hover{
     box-sizing: border-box;
@@ -163,9 +163,9 @@ a.category{
     height:47px;
     border-radius: 20px;
     /* border-color: black; */
-    background-color: #A4A0A0;
+    background-color:#0e0d0d;;
     border-style: solid;
-    border-color: #A4A0A0;
+    border-color:#BD804A;
     border-radius: 20px;
 }
 .search_bar::placeholder{
