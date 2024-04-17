@@ -1,10 +1,9 @@
-<html><!--Fantasy_books-->
-
+ <html>
 <head>
     <meta charset="utf-8">
     <title>The Changeling book</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script_test.js"></script>
+    <!-----------------------------------------------CSS PART---------------------------------------------->
     <style>
          body{
             background-color: antiquewhite;
@@ -34,11 +33,16 @@
             color:#BD804A;;
             cursor: pointer;
         }
+        #book_img{
+          border:5px solid #BD804A;
+          padding: 0;
+          border-radius: 3px;
+        }
     </style>
 </head>
 
 <body>
-    
+<!---------------------------------------------navigation bar-------------------------------------------->
         <div class="top_nav">
             <a href="available.html" class="left logo"><div><img src="logo_nobg.png" height="60px"></div></a>
             <a href="available.html" class="left"><div>Available Books</div></a>
@@ -72,7 +76,7 @@
         <dd id="Description"></dd>
     </dl>
     <button>Borrow</button>
-        
+    <!-------------------------------------------JAVASCRIPT PART---------------------------------------------->   
     <script>
     // Function to get the book parameter from the URL
     function getBookParameter() {
