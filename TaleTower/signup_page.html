@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <title>signup for Tale Tower</title>
   <meta name="signup" content="Sign up page for Tale Tower" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css_main/sign_up.css">
 </head>
-
 <body>
   <!-- sign up -->
-  <a href="main.html"><img src="logo.jpg" height="150px" width="250px" alt="View Main Page"></a>
+  <br>
   <table width="100%" height="100%">
     <tr>
       <td align="center" valign="middle">
         <br><br>
-        <h1><span style="font-size: 36px;">Welcome to Tale Tower Library</span></h1>
+        <h1><span>Welcome to Tale Tower Library</span></h1>
         <form action="submit_signup.html" method="post">
-          <label>Username</label><br>
-          <input type="text" required minlength="4"><br><br>
+          <div class="label-group">
+            <label>Username</label><br>
+            <input type="text" required minlength="4"><br><br>
+          </div>
 
           <label>Password</label><br>
           <input type="password" required minlength="4"><br><br>
@@ -31,7 +33,7 @@
             <input type="radio" id="as_user" name="usertype" value="asuser">
             <label for="as_user">As User</label>
             <input type="radio" id="as_admin" name="usertype" value="asadmin">
-            <label for="as_admin">As Admin</label><br>
+            <label for="as_admin">As Admin</label><br><br>
           </div>
 
           <input type="submit" value="Sign up">
