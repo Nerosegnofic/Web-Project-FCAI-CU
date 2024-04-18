@@ -9,31 +9,24 @@
 </head>
 <body>
   <!-- sign up -->
-  <br>
-  <table width="100%" height="100%">
+   <table width="100%" height="100%">
     <tr>
       <td align="center" valign="middle">
         <br><br>
-        <h1><span>Welcome to Tale Tower Library</span></h1>
-        <form action="submit_signup.html" method="post">
+        <h1><p>Welcome to Tale Tower Library</p></h1>
+        <form action="submit_signup.html" method="post" class="container">
+          <p class="sign_up">sign up</p><br>
           <div class="label-group">
-            <label>Username</label><br>
-            <input type="text" required minlength="4"><br><br>
+            <input type="text" required minlength="4" placeholder="Username"><br><br>
           </div>
-
-          <label>Password</label><br>
-          <input type="password" required minlength="4"><br><br>
-
-          <label>Confirm Password</label><br>
-          <input type="password" minlength="4" required><br><br>
-
-          <label>Email</label><br>
-          <input type="email" name="email" required><br><br>
+          <input type="password" required minlength="4" placeholder="Password"><br><br>
+          <input type="password" minlength="4" required placeholder="Confirm Password"><br><br>
+          <input type="email" name="email" required placeholder="Email"><br><br>
           <div>
             <input type="radio" id="as_user" name="usertype" value="asuser">
-            <label for="as_user">As User</label>
+            <label for="as_user" style="color:#BD804A;">As User</label>
             <input type="radio" id="as_admin" name="usertype" value="asadmin">
-            <label for="as_admin">As Admin</label><br><br>
+            <label for="as_admin" style="color:#BD804A;">As Admin</label><br><br>
           </div>
 
           <input type="submit" value="Sign up">
