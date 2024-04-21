@@ -1,12 +1,12 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>signin for Tale Tower</title>
     <meta name="signin" content="Sign in page for Tale Tower" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="sign.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sign.css">
 
 </head>
 
@@ -17,21 +17,16 @@
             <td align="center" valign="middle">
                 <br><br><br><br>
                 <h1><span style="font-size: 36px;">Welcome to Tale Tower Library</span></h1>
-                <form action="submit_signup.html" method="post" class="container">
+                <form id="signin" class="container">
                     <p class="sign">sign in</p><br>
                     <div>
-                        <input type="text" required minlength="4" placeholder="Username"><br><br>
+                        <input type="text" required minlength="4" placeholder="Username" id="inusername"><br><br>
                     </div>
 
                     <div>
-                        <input type="password" required minlength="4" placeholder="password">
+                        <input type="password" required minlength="4" placeholder="password" id="inpassword">
                     </div><br>
-                    <span>
-                        <input type="checkbox" class="remember"><span style="color:#BD804A;">remember me</span>
-                       <br><br>
-                    </span>
-                        
-                        
+   
                     <input type="submit" value="Sign in">
                     <br>
                     <h5>Don't have account??<a href="signup_page.html">create new one</a></h5>
@@ -40,6 +35,8 @@
             </td>
         </tr>
     </table>
+
+    <script type="module" src="js/signin.js"></script>
 </body>
 
 </html>
