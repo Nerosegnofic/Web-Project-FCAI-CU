@@ -337,7 +337,14 @@ input[type="search"]{
     color: black;
 }
 
-
+.bestseller img{
+    width:50px;
+    height:170px;
+}
+.recommendations img{
+    width:150px;
+    height:150px;
+}
 
 .sec-main.borrowbtn{
     width: 100%;
