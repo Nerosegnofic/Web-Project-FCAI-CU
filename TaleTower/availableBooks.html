@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Available Books</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="secmainpage" content="Second mainpage for page for Tale Tower" />
+    <script type="module" src="localStorage.js"></script>
+    <script type="module" src="addBook.js"></script>
+
+
+</head>
+<body>
+    <div class="top_nav">
+        <a href="second_main.html" class="left logo"><div><img src="img/logo_nobg.png" height="60px"></div></a>
+        <a href="availableBooks.html" class="left active"><div>Available Books</div></a>
+        <a href="borrowed.html" class="left"><div>Borrowed Books</div></a>
+        <a href="#cat" class="left category">
+            <div class="categories">
+                <div class="ctitle">Categories</div>
+                <div class="hidden">
+                    <div class="cat" onclick="scifi()">Sci-Fi</div>
+                    <div class="cat" onclick="adventure()">Adventure</div>
+                    <div class="cat" onclick="fantasy()">Fantasy</div>
+                    <div class="cat" onclick="history()">History</div>
+                </div>
+            </div></a>
+        <div class="left search">
+            <button onclick="search()" class="s-button"><img src="img/search.png" height="30px"></button>
+            <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar" id="searchInput">
+        </div>
+        <a href="#name" class="right name">N</a>
+        <a href="main.html" class="right signout">Sign Out</a>
+    </div>
+
+    <div class="book-flex" id="available-books">
+       
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="js/available.js"></script>
+    <script src="js/borrow.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+
+</html>

@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
     <title>Admin Page</title>
+
 </head>
 <body>
     <div class="top_nav_admin">
-        <a href="admin.html" class="left logo"><div><img src="logo_nobg.png" height="60px"></div></a>
+        <a href="admin.html" class="left logo"><div><img src="img/logo_nobg.png" height="60px"></div></a>
         <a href="admin.html" class="left active"><div>Available Books</div></a>
         <a href="add_book.html" class="left"><div>Add a Book</div></a>
         <a href="#name" class="right name">N</a>
         <a href="main.html" class="right signout">Sign Out</a>
     </div>
+    <!-- <button id="updateAvailableBooks">Update Available Books Page</button> -->
 
-    <div class="book-flex">
-        <div class="book a-book">
-            <a href="admin_details.html" target="_blank">
-                <img src="Deliverance.jpeg">
-            </a>
-            <button>Delete Book</button>
-        </div>
+    <div class="book-flex" id="admin_available">
     </div>
-    
-    <script src="script.js"></script>
+
+    <script type="module" src="js/localStorage.js"></script>
+    <script type="module" src="js/addBook.js"></script>
+    <script type="module" src="js/displayBook.js"></script>
+    <script type="module" src="js/addBook.js"></script>
+    <script type="module" src="js/adminAvailable.js"></script>
+    <script src="js/deleteBook.js"></script>
 </body>
 </html>

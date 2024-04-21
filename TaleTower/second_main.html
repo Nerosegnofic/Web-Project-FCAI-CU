@@ -4,11 +4,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Second Main page for Tale Tower</title>
+    <title>Second Main Page</title>
     <script src="script.js"></script>
     <meta name="secmainpage" content="Second mainpage for page for Tale Tower" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -17,21 +17,21 @@
         <!-- <img src="/book_PNG51100.png" alt="backgroundImage" class="main-image"> -->
         <nav>
             <div class="top_nav">
-                <a href="available.html" class="left logo"><div><img src="logo_nobg.png" height="60px"></div></a>
-                <a href="available.html" class="left"><div>Available Books</div></a>
+                <a href="second_main.html" class="left logo"><div><img src="img/logo_nobg.png" height="60px"></div></a>
+                <a href="availableBooks.html" class="left"><div>Available Books</div></a>
                 <a href="borrowed.html" class="left"><div>Borrowed Books</div></a>
                 <a href="#cat" class="left category">
                     <div class="categories">
                         <div class="ctitle">Categories</div>
                         <div class="hidden">
-                            <div class="cat" onclick="location.href='scifi.html';">Sci-Fi</div>
-                            <div class="cat" onclick="location.href='adventure.html';">Adventure</div>
-                            <div class="cat" onclick="location.href='fantasy.html';">Fantasy</div>
-                            <div class="cat" onclick="location.href='history.html';">History</div>
+                            <div class="cat" onclick="scifi()">Sci-Fi</div>
+                            <div class="cat" onclick="adventure()">Adventure</div>
+                            <div class="cat" onclick="fantasy()">Fantasy</div>
+                            <div class="cat" onclick="history()">History</div>
                         </div>
                     </div></a>
                 <div class="left search">
-                    <button type="submit" class="s-button"><img src="magnifying-glass.png" height="30px"></button>
+                    <button type="submit" class="s-button"><img src="img/search.png" height="30px"></button>
                     <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar">
                 </div>
                 <a href="#name" class="right name">N</a>
@@ -47,30 +47,30 @@
             <div class="bestseller">
                 <div>
                     <!-- <h3>Ancient Egypt: An Illustrated History</h3> -->
-                    <a href="book_details.html?book=Ancient_Egypt"><img src="Ancient_Egypt.jpeg"
+                    <a href="book_details.html?book=Ancient_Egypt"><img src="img/Ancient_Egypt.jpeg"
                             alt="View Details of Ancient Egypt: An Illustrated History"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>Empress of the Nile</h3> -->
-                    <a href="book_details.html?book=Empress of the Nile" ><img src="Empress of the Nile.jpeg"
+                    <a href="book_details.html?book=Empress of the Nile" ><img src="img/Empress of the Nile.jpeg"
                             alt="View Details of Empress of the Nile"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>Foundation</h3> -->
-                    <a href="book_details.html?book=Foundation"  ><img src="Foundation.jpg" alt="View Details of Foundation"></a>
+                    <a href="book_details.html?book=Foundation"  ><img src="img/Foundation.jpg" alt="View Details of Foundation"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>The Lightning Thief</h3> -->
-                    <a href="book_details.html?book=The Lightning Thief"  ><img src="The Lightning Thief.jpeg"
+                    <a href="book_details.html?book=The Lightning Thief"  ><img src="img/The Lightning Thief.jpeg"
                             alt="View Details of The Lightning Thief"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>The Three Body Problem</h3> -->
-                    <a href="book_details.html?book=The Three-Body Problem"  ><img src="the_Three_Body_problem.jpeg"
+                    <a href="book_details.html?book=The Three-Body Problem"  ><img src="img/the_Three_Body_problem.jpeg"
                             alt="View Details of The Three Body Problem"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
@@ -80,42 +80,42 @@
             <div class="recommendations">
                 <div>
                     <!-- <h3>Deliverance</h3> -->
-                    <a href="book_details.html?book=Deliverance" ><img src="Deliverance.jpeg"
+                    <a href="book_details.html?book=Deliverance" ><img src="img/Deliverance.jpeg"
                             alt="View Details of Deliverance" ></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>            
                 <div>
                     <!-- <h3>Hyperian</h3> -->
-                    <a href="book_details.html?book=Hyperion"  ><img src="Hyperian.jpg" alt="View Details of Hyperian"></a>
+                    <a href="book_details.html?book=Hyperion"  ><img src="img/Hyperian.jpg" alt="View Details of Hyperian"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>The Buried Giant</h3> -->
-                    <a href="book_details.html?book=The Buried Giant"  ><img src="The Buried Giant.jpeg"
+                    <a href="book_details.html?book=The Buried Giant"  ><img src="img/The Buried Giant.jpeg"
                             alt="View Details of The Buried Giant">
                     </a><button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>The Changeling</h3> -->
-                    <a href="book_details.html?book=The Changeling"  ><img src="The Changeling.jpeg"
+                    <a href="book_details.html?book=The Changeling"  ><img src="img/The Changeling.jpeg"
                             alt="View Details of The Changeling"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>The Fifth Season</h3> -->
-                    <a href="book_details.html?book=The Fifth Season"  ><img src="The Fifth Season.jpeg"
+                    <a href="book_details.html?book=The Fifth Season"  ><img src="img/The Fifth Season.jpeg"
                             alt="View Details of The Fifth Season"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>The Memoirs of Cleopatra</h3> -->
-                    <a href="book_details.html?book=The Memoirs of cleopatra"  ><img src="The_Memoirs_of_cleopatra.jpeg"
+                    <a href="book_details.html?book=The Memoirs of cleopatra"  ><img src="img/The_Memoirs_of_cleopatra.jpeg"
                             alt="View Details of The Memoirs of Cleopatra"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
                 <div>
                     <!-- <h3>Treasure Island</h3> -->
-                    <a href="book_details.html?book=Treasure Island"  ><img src="Treasure Island.jpeg"
+                    <a href="book_details.html?book=Treasure Island"  ><img src="img/Treasure Island.jpeg"
                             alt="View Details of Treasure Island"></a>
                     <button class="sec-main borrowbtn">Borrow</button>
                 </div>
