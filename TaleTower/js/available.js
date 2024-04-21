@@ -44,7 +44,7 @@
                         const author=books[i].author;
                         const category=books[i].category;
                         let img=books[i].imgUrl;
-                        img='img/'+img;
+                        // img='img/'+img;
                         const description=books[i].description;
                         const isAvailable=books[i].isAvailable;
                         const sendQuery = new URLSearchParams();

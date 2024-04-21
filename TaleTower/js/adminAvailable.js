@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const author=book.author;
             const category=book.category;
             let img=book.imgUrl;
-            img='/img'+img;
+            // img='img/'+img;
             const description=book.description;
             const isAvailable=book.isAvailable;
             const sendQuery = new URLSearchParams();
