@@ -1,17 +1,8 @@
-// import {borrow} from './borrow.js'
 
-// document.getElementById('admin_available').innerHTML = '';
-// document.getElementById('borrowedList').innerHTML = '';
-
-// localStorage.removeItem("Books");
-//     document.getElementById('available-books').innerHTML = '';
-
-
-// document.addEventListener('DOMContentLoaded', function () {
     let books=JSON.parse(localStorage.getItem("Books"))||[];
-    // console.log(books);
+
     console.log(books);
-    // books.forEach(book => {
+
 
         for(let i=0;i<books.length;i++){
             const title =books[i].title;
@@ -52,7 +43,8 @@
                         const title =books[i].title;
                         const author=books[i].author;
                         const category=books[i].category;
-                        const img=books[i].imgUrl;
+                        let img=books[i].imgUrl;
+                        img='img/'+img;
                         const description=books[i].description;
                         const isAvailable=books[i].isAvailable;
                         const sendQuery = new URLSearchParams();

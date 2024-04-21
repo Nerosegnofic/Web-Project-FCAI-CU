@@ -1,5 +1,6 @@
 const url = new URLSearchParams(window.location.search);
-const img = url.get('img');
+let img = url.get('img');
+img='img/'+img;
 const title=url.get('title');
 const author=url.get('author');
 const category=url.get('category');
