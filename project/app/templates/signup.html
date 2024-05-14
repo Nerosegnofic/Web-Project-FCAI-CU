@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>signup for Tale Tower</title>
+  <meta name="signup" content="Sign up page for Tale Tower" />
+  <!-- <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sign.css"> -->
+</head>
+<body>
+   <table width="100%" height="100%">
+    <tr>
+      <td align="center">
+        <br><br>
+        <h1><span style="margin-left:100px;">Welcome to Tale Tower Library</span></h1>
+        <form id="signup" class="container" action="{% url 'sign_up' %}" method="post">
+          {% csrf_token %}
+          <p class="sign">Sign up</p><br>
+          <div class="label-group">
+            <input type="text" placeholder="Username" id="username" name="username"><br><br>
+          </div>
+          <input type="password" placeholder="Password" id="password" name="password1"><br><br>
+          <input type="password" placeholder="Confirm Password" id="confirmPass" name="password2"><br><br>
+          <input type="email" name="email" required placeholder="Email" id="email"><br><br>
+          <div>
+            <input type="checkbox" id="as_admin" name="is_admin" value="true">
+            <label for="as_admin" style="color:#BD804A;">As Admin</label>
+          </div>
+
+          <input type="submit" value="Sign up">
+          <br>
+          <h5>already have account?<a href="signin_page.html">sign in</a></h5>
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <!-- <script type="module" src="js/sign.js"></script> -->
+</body>
+
+</html>

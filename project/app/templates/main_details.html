@@ -1,0 +1,133 @@
+{% extends "availableBooks.html" %}
+{% load static %}
+<html><!--Fantasy_books-->
+
+<head>
+    <meta charset="utf-8">
+    <title>The Changeling book</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_details_page.css' %}">
+     
+</head>
+
+<body>
+    {% block content %}
+    <p><h1 id="book_name"> </h1></p>
+    <br>
+    <img id="book_img"high="200px" width="200px">
+    <dl>
+        <dt><h2>Author : <span id="Author"></span></h2></dt>
+        <hr>
+        <dt><h2>Description :</h2></dt>
+        <dd id="Description"></dd>
+    </dl>
+    {% endblock %}
+    <script>
+    // Function to get the book parameter from the URL
+    function getBookParameter() {
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          return urlParams.get('book');
+    }
+
+    // Function to load content based on the book parameter
+    function loadBookContent() {
+          const bookParam = getBookParameter();
+          const bookContentElement = document.getElementById("bookContent");
+
+          // Example: Change content based on the book parameter
+          if (bookParam === 'Ancient_Egypt') {
+             document.getElementById('book_name').innerHTML='Ancient Egypt book';
+             document.getElementById('book_img').src='img/Ancient_Egypt.jpeg';
+             document.getElementById('Author').innerHTML='Lucia gahlin';
+             document.getElementById('Description').innerHTML='Ancient Egypt by Lucia Gahlin is a comprehensive -guide to the mythology, religion, and history of ancient Egypt.-The book explores the awe-inspiring temples, tombs, and other sacred sites of the world is first great civilization. It includes a chronology of ancient Egypt that charts the evolution of the society that emerged over 5,000 years ago and flourished for three millennia. The book is written in an engaging and accessible style, making it an ideal introduction to the wonders of ancient Egypt.';
+
+
+          } else if (bookParam === 'Deliverance') {
+            document.getElementById('book_name').innerHTML='Deliverance book';
+            document.getElementById('book_img').src='img/Deliverance.jpeg';
+            document.getElementById('Author').innerHTML='James Dickey';
+            document.getElementById('Description').innerHTML= 'Deliverance is a novel written by James Dickey,published in 1970, that tells the story of four middle-aged men who embark on a canoe trip in the Georgia wilderness. The novel explores themes of masculinity, survival, and the human condition. The men encounter dangerous mountain men, leading to violent confrontations and a struggle for survival. The novel is known for its vivid descriptions of the wilderness and the psychological impact of the events on the characters.t was adapted into a successful film in 1972,directed by John Boorman.  ';
+
+          }else if (bookParam === 'Empress of the Nile') {
+            document.getElementById('book_name').innerHTML='Empress of the Nile book';
+            document.getElementById('book_img').src='img/Empress of the Nile.jpeg';
+            document.getElementById('Author').innerHTML='Lynne Olson';
+            document.getElementById('Description').innerHTML= ' Empress of the Nile is a biography of Christiane Desroches-Noblecourt,a renowned French Egyptologist who made significant contributions to the field of Egyptology. Born in 1913, Desroches-Noblecourt fought to protect the Louvre is treasures during the Nazi occupation of France, and later became one of the world is greatest Egyptologists. She made major discoveries, played a key role in saving the ancient Nubian temple of Abu Simbel, and was involved in bringing the treasures of Tutankhamun for tours in the west. The book highlights her defiance of the Nazis, her groundbreaking work in Egyptology, and her significant contributions to preserving ancient Egyptian history.';
+
+          }  
+          else if (bookParam === 'Foundation') {
+            document.getElementById('book_name').innerHTML='Foundation book';
+            document.getElementById('book_img').src='img/Foundation.jpg';
+            document.getElementById('Author').innerHTML='American author Isaac Asimov';
+            document.getElementById('Description').innerHTML= 'The Foundation series is a collection of science fiction novels and short stories written by Isaac Asimov . The series is composed of several books,with the first one being"Foundation,"which is the starting point of the Foundation trilogy . This first book consists of five short stories,the first of which was written by Asimov in 1950 as an introduction to the series.The other four stories were originally published in Astounding Science Fiction magazine.The story begins on Synnax, where Gaal Dornick is preparing to travel to Trantor,the capital planet of the Galactic Empire. The empire,despite its long history and appearance of stability, has been declining for centuries. Hari Seldon,a mathematician who has developed the science of psychohistory,predicts the empire is downfall and seeks to establish a project to shorten the subsequent 30,000-year period of anarchy to just 1,000 years. Seldon and his team are eventually exiled to Terminus, a remote  planet on the edge of the galaxy,to work on the Encyclopedia Galactica';
+
+          }  
+          else if (bookParam === 'Hyperion') {
+            document.getElementById('book_name').innerHTML='Hyperion_book';
+            document.getElementById('book_img').src='img/Hyperian.jpg';
+            document.getElementById('Author').innerHTML='Dan Simmons';
+            document.getElementById('Description').innerHTML= 'Hyperion" is a science fiction novel written by Dan Simmons,which tells the story of seven pilgrims who embark on a journey to the planet Hyperion. Each of the pilgrims has a unique purpose for being on the journey,and as they travel, they share their stories with one another. The novel is structured as a series of interconnected narratives, with each pilgrim telling their story in turn. The first pilgrim to share their story is Father Lenar Hoyt, who is searching for his mentor, Father Paul Duré, who had been exiled to Hyperion years earlier. Duré had discovered an immortal tribe, the Bikura, who use a cruciform implanted in their chest to avoid dying a true death. Despite his attempts to die, Duré is unable to remove the cruciform and suffers for years.When Hoyt finally finds him, he releases the cruciform, and Duré dies a true death.';
+
+          }  
+          else if (bookParam === 'The Buried Giant') {
+            document.getElementById('book_name').innerHTML='The Buried Giant book';
+            document.getElementById('book_img').src='img/The Buried Giant.jpeg';
+            document.getElementById('Author').innerHTML='Kazuo Ishiguro';
+            document.getElementById('Description').innerHTML= 'it is a fantasy novel by Kazuo Ishiguro that follows an elderly Briton couple, Axl and Beatrice, as they journey to a neighboring village to seek out their son. Along the way, they encounter a host of characters, including a Saxon warrior named Wistan and the elderly Sir Gawain, and become embroiled in a larger conflict involving a she-dragon and the lingering effects of King Arthur is reign. The novel explores themes of memory, trauma, and the consequences of violence, as the characters navigate a world where a mist has caused a collective amnesia,blurring the lines between truth and myth. The novel is a unique blend of historical and fantastical elements,and has been praised for its lyrical prose and thought-provoking themes.';
+
+          }  
+          else if (bookParam === 'The Changeling') {
+            document.getElementById('book_name').innerHTML='The Changeling book';
+            document.getElementById('book_img').src='img/The Changeling.jpeg';
+            document.getElementById('Author').innerHTML='Victor LaValle';
+            document.getElementById('Description').innerHTML= 'it is a novel by Victor LaValle that tells the story of Apollo Kagwa,a man whose life is upended when his wife, Emma, kills their son and disappears.As Apollo searches for answers, he uncovers a world of magic, monsters, and fairy tales that he never knew existed. Along the way, he encounters a cast of colorful characters, including a group of women living on an abandoned island, a troll, and a mysterious man named William. As Apollo delves deeper into this world, he must confront his own past and come to terms with the truth about his father.The novel is a dark and thrilling exploration of love, loss, and the power of stories ';
+
+          }  
+          else if (bookParam === 'The Fifth Season') {
+            document.getElementById('book_name').innerHTML='The Fifth Season book';
+            document.getElementById('book_img').src='img/The Fifth Season.jpeg';
+            document.getElementById('Author').innerHTML='N. K. Jemisin';
+            document.getElementById('Description').innerHTML= 'it is a fantasy novel by N.K. Jemisin that takes place in a world called the Stillness, a land plagued by constant seismic activity and ashfall. The story follows three orogenes, people with the ability to manipulate the earth, as they navigate a society that fears and oppresses them. Essun, a woman seeking revenge for the murder of her son; Damaya, a young girl learning to control her powers at a training center; and Syenite, a powerful orogene forced to breed more of her kind, each have their own stories that intertwine in a complex narrative about power, oppression,and survival. The novel explores themes of dehumanization, survival,and the consequences of violence in a world where natural disasters are the norm.';
+
+          }  
+          else if (bookParam === 'The Lightning Thief') {
+            document.getElementById('book_name').innerHTML='The Lightning Thief book';
+            document.getElementById('book_img').src='img/The Lightning Thief.jpeg';
+            document.getElementById('Author').innerHTML='Rick Riordan';
+            document.getElementById('Description').innerHTML= 'The Lightning Thief" is a fantasy-adventure novel by Rick Riordan that follows twelve-year-old Percy Jackson, a boy with dyslexia and ADHD, as he embarks on a dangerous quest to find Zeus is master bolt and prevent a war among the gods. Along the way, he discovers that he is a demigod, the son of a human and the Greek god Poseidon, and must navigate a world filled with mythological creatures and gods. With the help of his friends Grover, a satyr, and Annabeth, a daughter of Athena, Percy battles monsters, solves riddles,and learns about his own powers as he travels across the United States to complete his mission. ';
+
+          }  
+          else if (bookParam === 'The Memoirs of cleopatra') {
+            document.getElementById('book_name').innerHTML='The Memoirs of cleopatra book';
+            document.getElementById('book_img').src='img/The_Memoirs_of_cleopatra.jpeg';
+            document.getElementById('Author').innerHTML='Margaret George';
+            document.getElementById('Description').innerHTML= 'The Memoirs of Cleopatra is a historical fiction novelwritten by Margaret George, which tells the story of Cleopatra VII, Queen of Egypt, from her early life under her father is rule to her eventual suicide. The novel follows Cleopatra is journey from her co-rule with her father, to her marriage with her brother Ptolemy XIII, to her tryst with Julius Caesar, and her affair with Marcus Antonius. George is novel is considered to be historically accurate and aims to depict Cleopatra as a political leader rather than the flighty character portrayed in Roman propaganda and Shakespearean plays.The novel was published in 1997 and was adapted into a four-part mini series by ABC in 1999.';
+
+          }  
+          else if (bookParam === 'The Three-Body Problem') {
+            document.getElementById('book_name').innerHTML='img/The Three-Body Problem book';
+            document.getElementById('book_img').src='the_Three_Body_problem.jpeg';
+            document.getElementById('Author').innerHTML='Liu Cixin';
+            document.getElementById('Description').innerHTML= 'The Three-Body Problem is a science fiction nove written by Liu Cixin that tells the story of humanity is first contact with an alien civilization. The novel is set in China and follows the lives of several characters, including Ye Wenjie, a physicist who becomes disillusioned with humanity after witnessing the atrocities of the Cultural Revolution. Ye sends a message into space inviting alien life to Earth,leading to the arrival of the Trisolarans, an advanced civilization from a distant star system.The Trisolarans are facing a crisis as their planet orbits three suns,causing unpredictable climate changes that threaten their existence.They plan to invade Earth and make it their new home, but their advanced technology is based on an understanding of physics that is incompatible with Earth . The novel explores the cultural and scientific differences between the two civilizations and raises questions about humanity is place in the universe. The Trisolarans advanced technology includes "sophons," particles that can disrupt particle accelerators and cause hallucinations,making it difficult for humans to resist their invasion.The novel won the Hugo Award for Best Novel in 2015, becoming the first Asian novel to do so';
+
+          }  
+          else if (bookParam === 'Treasure Island') {
+            document.getElementById('book_name').innerHTML='Treasure Island book';
+            document.getElementById('book_img').src='img/Treasure Island.jpeg';
+            document.getElementById('Author').innerHTML='Robert Louis Stevenson';
+            document.getElementById('Description').innerHTML= 'is an adventure novel by Robert Louis Stevenson that tells the story of young Jim Hawkins and his experiences with pirates and buried treasure.Jim comes into possession of a map leading to the treasure of the infamous pirate Captain Flint, and sets out on a dangerous journey to claim it. Along the way, he encounters a host of colorful characters, including the cunning and ruthless Long John Silver, and learns about loyalty, courage, and the dangers of greed. The novel is known for its atmospheric setting, memorable characters, and thrilling action,and has had a significant influence on depictions of pirates in popular culture.';
+
+          }  
+    }
+
+    // Load book content when the page loads
+    window.onload = loadBookContent;
+    </script>
+
+
+
+
+</body>
+
+</html>

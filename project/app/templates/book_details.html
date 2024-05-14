@@ -1,0 +1,30 @@
+{% extends "availableBooks.html" %}
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Book Details</title>
+    <!-- <script type="module" src="js/localStorage.js"></script> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_details_page.css' %}">
+    <style>
+    </style>
+</head>
+
+<body> 
+    {% block content %}  
+    <p><h1 id="book_name"> </h1></p>
+    <br>
+    <img id="book_img"high="200px" width="200px">
+    <dl>
+        <dt><h2>Author : <span id="Author"></span></h2></dt>
+        <dt><h2>Category : <span id="category"></span></h2></dt>
+        <hr>
+        <dt><h2>Description :</h2></dt>
+        <dd id="Description"></dd>
+    </dl>
+    {% endblock %}
+        <!-- <script src="js/book_details.js"></script> -->
+</body>
+
+</html>
