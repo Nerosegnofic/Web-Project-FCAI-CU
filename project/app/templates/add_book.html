@@ -1,3 +1,4 @@
+{% extends "admin.html" %}
 {% load widget_tweaks %}
 {% load static %}
 <!DOCTYPE html>
@@ -5,20 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/admin_details_page.css' %}">
     <title>Add Book</title>
 
 </head>
 <body>
-    <div class="top_nav_admin">
-        <!-- <a href="admin.html" class="left logo"><div><img src="img/logo_nobg.png" height="60px"></div></a> -->
-        <a href="{% url 'admin_page' %}" class="left logo"></a>
-        <a href="{% url 'admin_page' %}" class="left"><div>Available Books</div></a>
-        <a href="{% url 'add_book' %}" class="left active"><div>Add a Book</div></a>
-        <a href="#name" class="right name">N</a>
-        <a href="{% url 'main' %}" class="right signout">Sign Out</a>
-    </div>
+    {% block content %}
     {% if messages %}
         <div class="message">
             {% for message in messages %}
@@ -40,5 +34,6 @@
     </form>
     <!-- <script type="module" src="js/localStorage.js"></script>
     <script type="module" src="js/addBook.js"></script> -->
+    {% endblock %}
 </body>
 </html>

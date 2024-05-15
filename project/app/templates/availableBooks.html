@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Available Books</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <meta name="secmainpage" content="Second mainpage for page for Tale Tower" />
-    <!-- <script type="module" src="localStorage.js"></script>
-    <script type="module" src="addBook.js"></script> -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
@@ -15,9 +13,9 @@
 <body>
     <div class="top_nav">
         <a href="{% url 'second_main' %}" class="left logo"><div><img src="{% static 'img/logo_nobg.png' %}" height="60px"></div></a>
-        <a href="{% url 'available_books' %}" class="left active"><div>Available Books</div></a>
-        <a href="{% url 'borrowed_books' %}" class="left"><div>Borrowed Books</div></a>
-        <a href="#cat" class="left category">
+        <a href="{% url 'available_books' %}" class="left {% if active_tab == 'available' %}active{% endif %}"><div>Available Books</div></a>
+        <a href="{% url 'borrowed_books' %}" class="left {% if active_tab == 'borrowed' %}active{% endif %}"><div>Borrowed Books</div></a>
+        <a href="#cat" class="left category ">
             <div class="categories">
                 <div class="ctitle">Categories</div>
                 <div class="hidden">
@@ -38,7 +36,15 @@
     <div class="book-flex" id="available-books">
         {%for book in books%}
         <!-- must use .url -->
-        <div class="cover"><img src="{{book.cover_page.url}}"></div> 
+        <div class="book">
+            <div class="cover {% if not book.is_available %}unavailable{% endif %}"><img src="{{book.cover_page.url}}"></div>
+            {% if book.is_available %}
+                <button class="borrow">Borrow</button>
+            {% endif %}
+            {% if not book.is_available %}
+                <button class="unavailable">Unavailable</button>
+            {% endif %}
+        </div>
         {% endfor %}
     </div>
     {% endblock %}
@@ -74,10 +80,6 @@
         </div>
     </footer>
 
-<!-- 
-    <script type="module" src="js/available.js"></script>
-    <script src="js/borrow.js"></script>
-    <script src="js/filter.js"></script> -->
 </body>
 
 </html>

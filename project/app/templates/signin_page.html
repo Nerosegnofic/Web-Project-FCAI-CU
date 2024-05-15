@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>signin for Tale Tower</title>
     <meta name="signin" content="Sign in page for Tale Tower" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/sign.css' %}">
 
 </head>
@@ -28,15 +28,17 @@
                         <input type="password" required minlength="4" placeholder="password" id="inpassword">
                     </div><br>
    
-                    <input type="submit" value="Sign in">
+                    <a href="{% url 'available_books' %}"><input type="button" value="Sign in"></a>
                     <br>
-                    <h5>Don't have account??<a href="signup_page.html">create new one</a></h5>
+                    <h5>Don't have account??<a href="{% url 'sign_up' %}">create new one</a></h5>
                    
                 </form>
             </td>
         </tr>
     </table>
+    <script>
 
+    </script>
     <!-- <script type="module" src="js/signin.js"></script> -->
 </body>
 
