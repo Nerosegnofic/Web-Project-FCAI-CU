@@ -29,8 +29,8 @@
             <button onclick="search()" class="s-button"><img src="{% static 'img/search.png' %}" height="30px"></button>
             <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar" id="searchInput">
         </div>
-        <a href="#name" class="right name">N</a>
-        <a href="{% url 'main' %}" class="right signout">Sign Out</a>
+        <a href="#name" class="right name">{{letter}}</a>
+        <a href="{% url 'logout' %}" class="right signout">Sign Out</a>
     </div>
     {% block content %}
     <div class="book-flex" id="available-books">

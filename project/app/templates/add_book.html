@@ -6,13 +6,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/admin_details_page.css' %}">
     <title>Add Book</title>
-
+    <style>
+        body{
+            background-color: black;
+        }
+        
+        </style>
 </head>
 <body>
     {% block content %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addbook.css' %}">
     {% if messages %}
         <div class="message">
             {% for message in messages %}
@@ -22,18 +27,34 @@
             {% endfor %}
         </div>
     {% endif%}
-
+<div class="flex">
     <form id="addBookForm" method="POST" action="{% url 'add_book' %}" enctype="multipart/form-data">
         {% csrf_token %}
-        {% render_field form.name placeholder="Title" %}
-        {% render_field form.author placeholder="Author" %}
-        {% render_field form.category placeholder="Category" %}
-        {% render_field form.cover_page placeholder="Book Cover" %}
-        {% render_field form.description placeholder="Description" %}
-        <input type="submit" value="Add Book">
+        <table>
+            <tr>
+                <td><p class="sign">Add Book</p></td>
+            </tr>
+            <tr>
+                <td>{% render_field form.name placeholder="Title" %}</td>
+            </tr>
+            <tr>
+                <td>{% render_field form.author placeholder="Author" %}</td>
+            </tr>
+            <tr>
+                <td>{% render_field form.category placeholder="Category" %}</td>
+            </tr>
+            <tr>
+                <td>{% render_field form.description placeholder="Description" %}</td>
+            </tr>
+            <tr>
+                <td>{% render_field form.cover_page placeholder="Book Cover" %}</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Add Book"></td>
+            </tr>
+        </table>
     </form>
-    <!-- <script type="module" src="js/localStorage.js"></script>
-    <script type="module" src="js/addBook.js"></script> -->
+</div>
     {% endblock %}
 </body>
 </html>

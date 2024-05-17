@@ -5,23 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'css/borrowed.css' %}">
     <title>Borrowed Books</title>
-
 </head>
 <body>
     {% block content %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/borrowed.css' %}">
     <div class="book-flex" id="borrowedList">
     
     </div>
     {% endblock %}
- 
-    <!-- <script type="module" src="js/available.js"></script>
-    <script type="module" src="js/borrow.js"></script>
-    <script type="module" src="js/localStorage.js"></script>
-    <script type="module" src="js/displayBook.js"></script>
-    <script type="module" src="js/addBook.js"></script>
-    <script src="js/filter.js"></script> -->
 </body>
 </html>
