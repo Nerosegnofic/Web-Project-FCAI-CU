@@ -1,0 +1,42 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>signin for Tale Tower</title>
+    <meta name="signin" content="Sign in page for Tale Tower" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+</head>
+
+<body>
+    <div class="flex">
+        <!-- <div class="flex-item"> -->
+            <form id="signin" class="container" method="POST" action="{% url 'sign_in' %}">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td><p class="sign">Sign in</p></td>
+                    </tr>
+                    <tr>
+                        <td>{% render_field form.username placeholder="Username" %}</td>
+                    </tr>
+                    <tr>
+                        <td>{% render_field form.password placeholder="Password" %}</td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Sign in"></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Don't have account? <a href="{% url 'sign_up' %}"><p class="bottom">Create New One</p></a></h5></td>
+                    </tr>
+                </table>
+                <br>
+            </form>
+    </div>
+</body>
+
+</html>
