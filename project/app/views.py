@@ -24,8 +24,15 @@ def borrowed_books(request):
     active_tab = 'borrowed'
     return render(request, 'borrowed.html', {'active_tab': active_tab, 'letter':letter})
 
-def book_details(request):
-    return render(request, 'book_details.html')
+def book_details(request, book_id):
+    id = book_id
+    book = Book.objects.get(book_id=id)
+    return render(request, 'book_details.html', {'book': book})
+
+def admin_details(request, book_id):
+    id = book_id
+    book = Book.objects.get(book_id=id)
+    return render(request, 'admin_details.html', {'book': book})
 
 def add_book(request):
     active_tab = 'add_book'
@@ -51,5 +58,6 @@ def admin_page(request):
     letter = request.user.username[0].upper()
     books = Book.objects.all()
     return render(request, 'admin.html', {'books':books, 'active_tab':active_tab, 'letter':letter})
+
 
 
