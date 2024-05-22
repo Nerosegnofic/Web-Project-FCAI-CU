@@ -9,7 +9,7 @@
 
 </head>
 
-<body>
+<body> 
     
   <div class="top_nav_admin">
     <a href="admin.html" class="left logo"><div><img src="img/logo_nobg.png" height="60px"></div></a>
@@ -19,22 +19,25 @@
     <a href="main.html" class="right signout">Sign Out</a>
 </div>
      
-        
-    <p><h1 id="dTitle" contenteditable="true"> </h1></p>
-    <br>
-    <!-- <div class="imgButton"> -->
-        <img id="bImg" width="200px">
-        <!-- </div> -->
-        <dl>
-            <dt><h2>Author : <span id="dAuthor" contenteditable="true"></span></h2></dt>
-            <dt><h2>Category : <span id="dCategory" contenteditable="true"></span></h2></dt>
-            <hr>
-            <dt><h2>Description :</h2></dt>
-            <dd id="dDesc" contenteditable="true"></dd>
-        </dl>
-        <button id="save">Save Changes</button>
-        
-        <script src="js/adminDetails.js"></script>
+    <div style="display: flex; flex-direction: column;"> 
+        <p><h1 id="dTitle" contenteditable="true"> {{book.name}} </h1></p>
+        <br>
+        <!-- <div class="imgButton"> -->
+        <div class="books-container2">
+            <img id="book_img"high="200px" width="200px" src="{{book.cover_page.url}}">
+            <!-- </div> -->
+            <dl>
+                <dt><h2>Author : <span id="dAuthor" contenteditable="true"> {{book.author}} </span></h2></dt>
+                <dt><h2>Category : <span id="dCategory" contenteditable="true"> {{book.category}} </span></h2></dt>
+                <hr>
+                <dt><h2>Description :</h2></dt>
+                <dd id="dDesc" contenteditable="true"> {{book.description}} </dd>
+            </dl>
+            <button id="save">Save Changes</button>
+            
+            <script src="js/adminDetails.js"></script>
+        </div>
+    </div>
         
 </body>
 </html>
