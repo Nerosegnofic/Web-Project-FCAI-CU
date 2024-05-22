@@ -36,8 +36,8 @@
     <div class="book-flex" id="available-books">
         {%for book in books%}
         <!-- must use .url -->
-        <div class="book">
-            <div class="cover {% if not book.is_available %}unavailable{% endif %}"><img src="{{book.cover_page.url}}"></div>
+        <div class ="book"><a href="{% url 'book_details' book.book_id %}">
+            <div class ="cover {% if not book.is_available %}unavailable_cover{% endif %}"><img src = "{{book.cover_page.url}}"></div></a>
             {% if book.is_available %}
                 <button class="borrow">Borrow</button>
             {% endif %}
