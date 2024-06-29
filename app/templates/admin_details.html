@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Details</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin_details_page.css' %}">
+    <!-- <script type="module" src="js/localStorage.js"></script> -->
+
+</head>
+
+<body>
+    
+  <div class="top_nav_admin">
+    <a href="{% url 'admin_page' %}" class="left logo"><div><img src="{% static 'img/logo_nobg.png' %}" height="60px"></div></a>
+    <a href="{% url 'admin_page' %}" class="left active"><div>Available Books</div></a>
+    <a href="{% url 'add_book' %}" class="left"><div>Add a Book</div></a>
+    <a href="#name" class="right name">N</a>
+    <a href="{% url 'logout' %}" class="right signout">Sign Out</a>
+</div>
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addbook.css' %}">
+<div class="flex">
+    <form id="addBookForm" method="POST" action="">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Save Changes" class = "btn btn-secondary" onclick = "savemsg()">
+    </form>
+</div>
+{% endblock %}
+<script>
+    function savemsg(){
+        alert("Book edited successfully");
+    }
+</script>
+</body>
+</html>

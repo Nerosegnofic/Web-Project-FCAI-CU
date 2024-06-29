@@ -1,0 +1,40 @@
+{% extends "availableBooks.html" %}
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Second Main Page</title>
+    <script src="script.js"></script>
+    <meta name="secmainpage" content="Second mainpage for page for Tale Tower" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="second-mainpage">
+    {% block content %}
+    <div class="books-container">
+        <div class="books">
+            <h1 class="fst-tle">Bestsellers</h1>
+            <div class="bestseller">
+
+                {% for book in best%}
+                    <div class="second_cover"><img src="{{book.cover_page.url}}"></div>         
+                {% endfor %}
+            </div>        
+            <h1 class="sec-tle"> Our Recommendations</h1>
+            <div class="recommendations">
+                {% for book in recommended%}
+                    <div class="second_cover"><img src="{{book.cover_page.url}}"></div>                     
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    
+</body>
+
+</html>

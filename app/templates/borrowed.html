@@ -1,0 +1,28 @@
+{% extends "availableBooks.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowed Books</title>
+</head>
+<body>
+    {% block content %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/borrowed.css' %}">
+    <div class="book-flex" id="borrowedList">
+        <div class="book-flex" id="available-books">
+            {%for book in books%}
+            <!-- must use .url -->
+            <div class="book"><a href="{% url 'book_details' book.book_id %}">
+                <div class="cover"><img src="{{book.cover_page.url}}"></div></a>
+                <button class="returnBook" value="{{book.book_id}}">Return</button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{% static 'js/return.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

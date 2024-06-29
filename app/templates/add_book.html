@@ -1,0 +1,60 @@
+{% extends "admin.html" %}
+{% load widget_tweaks %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        
+        </style>
+</head>
+<body>
+    {% block content %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addbook.css' %}">
+    {% if messages %}
+        <div class="message">
+            {% for message in messages %}
+                {% if 'book_added' in message.tags %}
+                    {{message}}
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif%}
+<div class="flex">
+    <form id="addBookForm" method="POST" action="{% url 'add_book' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><p class="sign">Add Book</p></td>
+            </tr>
+            <tr>
+                <td>{% render_field form.name placeholder="Title" %}</td>
+            </tr>
+            <tr>
+                <td>{% render_field form.author placeholder="Author" %}</td>
+            </tr>
+            <tr>
+                <td>{% render_field form.category placeholder="Category" %}</td>
+            </tr>
+            <tr>
+                <td>{% render_field form.description placeholder="Description" %}</td>
+            </tr>
+            <tr>
+                <td>{% render_field form.cover_page placeholder="Book Cover" %}</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Add Book"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+    {% endblock %}
+</body>
+</html>

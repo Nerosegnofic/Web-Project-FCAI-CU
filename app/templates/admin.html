@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var csrfToken = '{{ csrf_token }}';
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Admin Page</title>
+</head>
+<body>
+    <div class="top_nav_admin">
+        <a href="{% url 'admin_page' %}" class="left logo"><div><img src="{% static 'img/logo_nobg.png' %}" height="60px"></div></a>
+        <a href="{% url 'admin_page' %}" class="left {% if active_tab == 'admin_page' %}active{% endif %}"><div>Available Books</div></a>
+        <a href="{% url 'add_book' %}" class="left {% if active_tab == 'add_book' %}active{% endif %}"><div>Add a Book</div></a>
+        <a href="#name" class="right name">{{letter}}</a>
+        <a href="{% url 'logout' %}" class="right signout">Sign Out</a>
+    </div>
+    <!-- <button id="updateAvailableBooks">Update Available Books Page</button> -->
+    {% block content %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <div class="book-flex" id="admin_available">
+        {%for book in books%}
+        <!-- must use .url -->
+        <div class="book" data-book-id="{{ book.book_id }}" >
+            <a href="{% url 'edit_details' book.book_id %}">
+            <div class="cover"><img src="{{book.cover_page.url}}"></div></a> 
+            <button class="borrow delete_btn" onclick = "confirmDelete('{{ book.book_id }}')">Delete</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+    <script src="{% static 'js/delete.js' %}"></script>
+</body>
+</html>

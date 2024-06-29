@@ -1,0 +1,24 @@
+{% extends "availableBooks.html" %}
+{% load static %}
+
+
+{%block content%}
+<link rel="stylesheet" href="{% static 'css/edit_details.css' %}">
+<div class="container">
+    <div class="left-column">
+        <h1 id="dTitle">{{book.name}}</h1>
+        <img id="book_img" height="200px" width="200px" src="{{book.cover_page.url}}">
+
+    </div>
+
+    <div class="right-column books-container2">
+        <dl>
+            <dt><h2>Author : <span id="dAuthor" contenteditable="false">{{book.author}}</span></h2></dt>
+            <dt><h2>Category : <span id="dCategory" contenteditable="false">{{book.category}}</span></h2></dt>
+            <hr>
+            <dt><h2>Description :</h2></dt>
+            <dd id="dDesc" contenteditable="false">{{book.description}}</dd>
+        </dl>  
+    </div>
+</div>
+{%endblock%}
